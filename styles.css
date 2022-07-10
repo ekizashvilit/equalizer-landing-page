@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    background-image: url(assets/bg-main-mobile.png);
+    background-color: #FCFAF9;
+    background-repeat: no-repeat;
+    background-size: 30rem;
+    background-position: left 3rem top -10.875rem;
+    color: #191826;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+/* HEADER */
+
+.header {
+    margin: 2.5rem 1.5rem 10.313rem;
+}
+
+.hero-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin: 4rem 0 1.25rem;
+}
+
+.header p {
+    line-height: 1.6rem;
+}
+
+/* MAIN SECTION */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+}
+
+.black-card  {
+    background-color: #191826;
+    background-image: url(assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 17.5rem 26.25rem;
+    border-radius: 0.75rem;
+    max-width: 23.5rem;
+    width: 23.5rem;
+    height: 37.5rem;
+}
+
+.black-card img {
+    position: relative;
+    width: 13.061rem;
+    height: 26.875rem;
+    top: -6.25rem;
+    left: 5rem;
+}
+
+.orange-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FA7453;
+    color: #FCFAF9;
+    border-radius: 0.75rem;
+    width: 23.438rem;
+    height: 34.125rem;
+    padding: 3rem 2.25rem;
+    margin-top: -13.75rem;
+}
+
+.orange-card h2 {
+    font-size: 2rem;
+}
+
+.orange-card p {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+    margin: 0.75rem 0 2.25rem 0;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.cost {
+    font-size: 4.063rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.per-month {
+    font-size: 1.25rem;
+}
+
+.ios-btn {
+    background-color: #191826;
+    color: #FCFAF9;
+}
+
+.download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18.5rem;
+    max-width: 18.5rem;
+    height: 3.813rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    line-height: 2rem;
+}
+
+.logo-margin {
+    margin-left: 0.494rem;
+}
+
+.android-btn {
+    background-color: #FCFAF9;
+    margin-top: 1rem;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 1.5rem 5rem;
+}
+
+#footer-logo {
+    height: auto;
+    width: 9.131rem;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.footer-info p {
+    line-height: 1.625rem;
+    color: #191826;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+.ios-btn:hover {
+    background-color: #66E2DC;
+}
+
+.android-btn:hover {
+    background-color: #FFB964;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+    .header {
+        margin-top: 3.875rem;
+        margin-left: 2.438rem;
+        max-width: 32.5rem;
+    }
+
+    .header h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .header p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    body {
+        background-image: url(assets/bg-main-tablet.png), url(assets/bg-pattern-1.svg);
+        background-color: #FCFAF9;
+        background-repeat: no-repeat;
+        background-size: 56rem, 16.667rem;
+        background-position: left -12rem top -10.875rem, right top -2rem;
+    }
+
+    .black-card {
+        min-width: 43.5rem;
+    }
+
+    .orange-card {
+        position: relative;
+        top: -230px;
+        right: -247px;
+        min-height: 34.125rem;
+        width: 24.938rem;
+    }
+
+    .main {
+        margin: 6.875rem 2.063rem 0 2.063rem;
+    }
+
+    .black-card img {
+        min-height: 34.75rem;
+        width: auto;
+        top: -140px;
+        left: 45px;
+    }
+
+    .footer {
+        margin-top: -115px;
+    }
+
+    .footer-info {
+        flex-direction: row;
+        justify-content: space-between;    
+    }
+
+    .footer-info div {
+        width: calc(100% / 2);
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .download {
+        width: 296px;
+        max-width: 296px;
+        height: 61px;
+        font-size: 1.125rem;
+        /* margin-left: 49px; */
+        margin-right: 49px;
+    }
+
+}
+
+/* DESKTOP */
+
+@media (min-width: 1440px) {
+    body {
+        background-image: url(assets/bg-pattern-1.svg), url(assets/bg-main-desktop.png);
+        background-color: #FCFAF9;
+        background-repeat: no-repeat;
+        background-size: 19.5rem, 130rem;
+        background-position: right top -2rem, left -20rem top -15.875rem;
+    }
+
+    
+
+    .header h1 {
+        font-size: 5.5rem;
+        min-width: 63.438rem;
+        line-height: 5.5rem;
+        margin-top: 7.813rem;
+    }
+
+    .header p {
+        min-width: 51.563rem;
+        line-height: 2.125rem;
+    }
+    
+    .black-card {
+        min-width: 69.375rem;
+        background-size: 19.5rem 29.25rem;
+    }
+
+    .black-card img {
+        min-height: 40.125rem;
+        width: auto;
+        top: -165px;
+        left: 127px;
+    }
+
+    .orange-card {
+        position: relative;
+        top: -255px;
+        left: 542px;
+        min-height: 39.063rem;
+        width: 27.875rem;
+        padding: 3.625rem 3.375rem 3rem 3.375rem;
+    }
+
+    .orange-card h2 {
+        font-size: 40px;
+    }
+
+    .orange-card p {
+        font-size: 20px;
+        line-height: 34px;
+    }
+
+    .download {
+        width: 20.813rem;
+        max-width: 20.813rem;
+        height: 3.813rem;
+        font-size: 1.125rem;
+    }
+
+    /* .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-info {
+        min-width: 805px;
+    } */
+
+}
