@@ -50,8 +50,7 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    width: 100%;
+    
 }
 
 .black-card  {
@@ -61,8 +60,8 @@ body {
     background-position: top;
     background-size: 17.5rem 26.25rem;
     border-radius: 0.75rem;
-    max-width: 23.5rem;
-    width: 23.5rem;
+    min-width: 23.5rem;
+    /* width: 23.5rem; */
     height: 37.5rem;
 }
 
@@ -81,8 +80,8 @@ body {
     background-color: #FA7453;
     color: #FCFAF9;
     border-radius: 0.75rem;
-    width: 23.438rem;
-    height: 34.125rem;
+    /* width: 23.438rem; */
+    /* height: 34.125rem; */
     padding: 3rem 2.25rem;
     margin-top: -13.75rem;
 }
@@ -125,13 +124,14 @@ body {
     justify-content: center;
     width: 18.5rem;
     max-width: 18.5rem;
-    height: 3.813rem;
+    min-height: 3.813rem;
     font-size: 1.125rem;
     font-weight: 700;
     border-radius: 0.75rem;
     border: none;
     cursor: pointer;
     line-height: 2rem;
+    align-self: center;
 }
 
 .logo-margin {
@@ -143,12 +143,15 @@ body {
     margin-top: 1rem;
 }
 
+
 /* FOOTER */
 
 .footer {
     display: flex;
     flex-direction: column;
-    margin: 4rem 1.5rem 5rem;
+    margin: 4rem 1.5rem 5rem 1.5rem;
+    width: 20.438rem;
+    gap: 2rem;
 }
 
 #footer-logo {
@@ -160,18 +163,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    margin-top: 2rem;
 }
 
 .footer-info p {
     line-height: 1.625rem;
     color: #191826;
+    width: 20.438rem;
+    margin-top: -25px;
 }
 
 .social-icons {
     display: flex;
     flex-direction: row;
     gap: 1.25rem;
+    margin-top: 25px;
 }
 
 .ios-btn:hover {
@@ -183,9 +188,11 @@ body {
 }
 
 
+
+
 /* TABLET */
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     .header {
         margin-top: 3.875rem;
         margin-left: 2.438rem;
@@ -203,11 +210,11 @@ body {
     }
 
     body {
-        background-image: url(assets/bg-main-tablet.png), url(assets/bg-pattern-1.svg);
+        background-image: url(assets/bg-pattern-1.svg), url(assets/bg-main-tablet.png);
         background-color: #FCFAF9;
         background-repeat: no-repeat;
-        background-size: 56rem, 16.667rem;
-        background-position: left -12rem top -10.875rem, right top -2rem;
+        background-size: 16.667rem, 56rem;
+        background-position: right top -2rem, left -12rem top -10.875rem;
     }
 
     .black-card {
@@ -223,7 +230,7 @@ body {
     }
 
     .main {
-        margin: 6.875rem 2.063rem 0 2.063rem;
+        margin: auto;
     }
 
     .black-card img {
@@ -234,19 +241,23 @@ body {
     }
 
     .footer {
-        margin-top: -115px;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 43.5rem;
     }
 
     .footer-info {
-        flex-direction: row;
         justify-content: space-between;    
     }
 
-    .footer-info div {
-        width: calc(100% / 2);
-        display: flex;
-        align-items: center;
-        justify-content: end;
+    .footer-info p {
+        max-width: 22.875rem;
+    }
+
+    .social-icons {
+        align-self: flex-end;
+        position: relative;
+        bottom: 50px;
     }
 
     .social-icons img {
@@ -259,8 +270,12 @@ body {
         max-width: 296px;
         height: 61px;
         font-size: 1.125rem;
-        /* margin-left: 49px; */
-        margin-right: 49px;
+        margin: auto;
+
+    }
+
+    .ios-btn {
+        margin-bottom: 1rem;
     }
 
 }
@@ -327,13 +342,32 @@ body {
         font-size: 1.125rem;
     }
 
-    /* .footer {
+    .footer {
         flex-direction: row;
         justify-content: space-between;
+        min-width: 69.375rem;
     }
 
     .footer-info {
-        min-width: 805px;
-    } */
+        flex-direction: row;
+        min-width: 40.563rem;
+    }
 
+    .footer-info p {
+        max-width: 22.875rem;
+    }
+
+    #footer-logo {
+        height: 32px;
+    }
+
+    .footer-info img {
+        position: relative;
+        top: -25px;
+    }
+
+    .socials:hover {
+        fill: #FA7453;
+        cursor: pointer;
+    }
 }
